@@ -1,32 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="match_parent"
-    android:gravity="center"
-    tools:context=".MainActivity">
+    android:layout_width="match_parent">
 
-
-    <LinearLayout
-        android:id="@+id/buttonIMC"
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        android:paddingStart="12dp"
-        android:paddingEnd="12dp"
-        android:background="@color/colorLightGray">
+        android:text="@string/label"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonIMC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/baseline_wb_sunny_24" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonIMC"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button"
+        android:text="@string/logIn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="50dp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/labelIMC" />
-    </LinearLayout>
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

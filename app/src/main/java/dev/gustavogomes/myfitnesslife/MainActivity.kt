@@ -2,12 +2,12 @@ package dev.gustavogomes.myfitnesslife
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.LinearLayout
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
 
-  private lateinit var buttonImc: LinearLayout
+  private lateinit var buttonImc: Button
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
