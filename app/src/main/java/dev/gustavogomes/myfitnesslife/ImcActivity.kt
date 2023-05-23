@@ -1,5 +1,6 @@
 package dev.gustavogomes.myfitnesslife
 
+import android.app.AlertDialog
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -30,9 +31,17 @@ class ImcActivity : AppCompatActivity() {
       val height = editHeight.text.toString().toInt()
 
       val finalResult = imcCalc(weight, height)
-
       val imcResponseId = imcResponse(finalResult)
-      Toast.makeText(this, imcResponseId, Toast.LENGTH_SHORT).show()
+
+      val dialogTitle = getString(R.string.imc_response, finalResult)
+      val dialog = AlertDialog.Builder(this)
+        .setTitle(dialogTitle)
+        .setMessage(imcResponseId)
+        .setPositiveButton(
+          android.R.string.ok
+        ) { _, _ -> }
+        .create()
+        .show()
     }
   }
 
