@@ -36,7 +36,7 @@ class ImcActivity : AppCompatActivity() {
       val imcResponseId = imcResponse(finalResult)
 
       val dialogTitle = getString(R.string.imc_response, finalResult)
-      val dialog = AlertDialog.Builder(this)
+      AlertDialog.Builder(this)
         .setTitle(dialogTitle)
         .setMessage(imcResponseId)
         .setPositiveButton(
